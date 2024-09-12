@@ -1,5 +1,5 @@
-﻿namespace EventHubs.Lab.Producer.Features.SendMessageEventHub;
+﻿using MediatR;
 
-public class SendMessageEventHubCommand
-{
-}
+namespace EventHubs.Lab.Producer.Features.SendMessageEventHub;
+
+public record SendMessageEventHubCommand(SendMessageEventHubRequest MessageRequest): IRequest;
