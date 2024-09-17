@@ -3,6 +3,7 @@ $Location = 'eastus2'
 $Namespace = 'gap-lab-ns'
 $EventHub = 'gap-lab-hub'
 $ConsumerGroup = 'gap-lab-cg'
+$KafkaConsumerGroup = 'gap-lab-kafka-cg'
 $Identity = 'gap-lab-identity'
 
 # Create RG:
@@ -23,3 +24,6 @@ az eventhubs eventhub consumer-group create --consumer-group-name $ConsumerGroup
 $MIPrincipalId = az identity show --name $Identity -g $ResourceGroup --query principalId -o json | ConvertFrom-Json
 # Set Role to Event Hub:
 $RoleAssignment = az role assignment create --assignee-object-id $MIPrincipalId --assignee-principal-type ServicePrincipal --role 'Azure Event Hubs Data Owner'--scope $EventHubId --query createdOn -o json | ConvertFrom-Json
+
+# Create Kafka Consumer Group:
+az eventhubs eventhub consumer-group create --consumer-group-name $KafkaConsumerGroup --eventhub-name $EventHub --namespace-name $Namespace -g $ResourceGroup

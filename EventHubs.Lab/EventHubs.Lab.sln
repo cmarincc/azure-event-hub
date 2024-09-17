@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHubs.Lab.Producer", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHubs.Lab.Consumer", "EventHubs.Lab.Consumer\EventHubs.Lab.Consumer.csproj", "{9DBC2658-99EB-4A3E-9108-EE12B52D3030}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHubsKafka.Lab.Consumer", "EventHubsKafka.Lab.Consumer\EventHubsKafka.Lab.Consumer.csproj", "{FD1279A3-8DF7-4A20-A4FE-BD234706DDFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9DBC2658-99EB-4A3E-9108-EE12B52D3030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DBC2658-99EB-4A3E-9108-EE12B52D3030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DBC2658-99EB-4A3E-9108-EE12B52D3030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD1279A3-8DF7-4A20-A4FE-BD234706DDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD1279A3-8DF7-4A20-A4FE-BD234706DDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD1279A3-8DF7-4A20-A4FE-BD234706DDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD1279A3-8DF7-4A20-A4FE-BD234706DDFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
-﻿namespace EventHubs.Lab.Producer.Features.SendMessageEventHub;
+﻿namespace EventHubsKafka.Lab.Consumer;
 
-public record SendMessageEventHubRequest
+public class SendMessageEventHubRequest
 {
     public string? Message { get; set; }
     public string? Messager { get; set; }

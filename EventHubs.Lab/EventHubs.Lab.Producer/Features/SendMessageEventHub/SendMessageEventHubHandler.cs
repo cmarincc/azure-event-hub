@@ -14,7 +14,7 @@ public class SendMessageEventHubHandler(
         var eventHubProducerClient = eventHubProducerClientFactory.CreateClient("EventHubProducerClient");
 
         var eventBatch = await eventHubProducerClient.CreateBatchAsync(
-            new CreateBatchOptions { PartitionId = command.MessageRequest.partitionId },
+            new CreateBatchOptions { PartitionId = command.MessageRequest.PartitionId },
             cancellationToken);
 
         if (string.IsNullOrEmpty(command.MessageRequest.Message))
