@@ -35,8 +35,6 @@ app.MapPost("/api/eventhub", async ([FromBody] SendMessageEventHubRequest reques
     return Results.Ok();
 });
 
-app.MapGet("/", () => "Hello World!");
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

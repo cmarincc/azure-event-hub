@@ -6,6 +6,7 @@ using Microsoft.Identity.Client;
 var builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddHostedService<Worker>();
 
+builder.Services.Configure<ConsumerConfig>(builder.Configuration.GetSection("ConsumerConfig"));
 
 var host = builder.Build();
 host.Run();
