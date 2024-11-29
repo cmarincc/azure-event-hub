@@ -1,6 +1,6 @@
 ﻿namespace EventHubs.Lab.Producer.Configuration;
 
-public record EventHubConfiguration
+public class EventHubConfiguration
 {
     public string? NameSpace { get; set; }
     public string? EventHubName { get; set; }

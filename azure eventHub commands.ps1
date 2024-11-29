@@ -27,3 +27,6 @@ $RoleAssignment = az role assignment create --assignee-object-id $MIPrincipalId 
 
 # Create Kafka Consumer Group:
 az eventhubs eventhub consumer-group create --consumer-group-name $KafkaConsumerGroup --eventhub-name $EventHub --namespace-name $Namespace -g $ResourceGroup
+
+
+$RoleAssignment = az role assignment create --assignee-object-id $MIPrincipalId --assignee-principal-type ServicePrincipal --role 'Azure Event Hubs Data Owner'--scope 'az-labs-container-apps' --query createdOn -o json | ConvertFrom-Json

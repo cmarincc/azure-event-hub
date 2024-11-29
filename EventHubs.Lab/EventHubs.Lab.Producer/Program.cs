@@ -35,12 +35,8 @@ app.MapPost("/api/eventhub", async ([FromBody] SendMessageEventHubRequest reques
     return Results.Ok();
 });
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
